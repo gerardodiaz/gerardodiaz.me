@@ -1,0 +1,192 @@
+
+@font-face { font-family: 'League Gothic'; src: url('../fonts/league-gothic.otf'); }
+@font-face { font-family: 'Goudy'; src: url('../fonts/goudy.otf'); } 
+@font-face { font-family: 'Goudy'; font-style: italic; src: url('../fonts/OFLGoudyStM-Italic.otf'); }
+
+/* RESET */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+::selection { background: #8ad8f2; }
+::-moz-selection { background: #8ad8f2; }
+  
+  
+/* GIMME HTML5 NOW! */
+
+section, article, header, footer, nav, aside, hgroup {
+	display: block;
+}
+
+/*--------------------------------------------------*/
+
+@media screen {
+
+body {
+	background-color: #eee;
+	background: url(../img/bg-html2.png) top center repeat-x;
+	font-family: Georgia, Palatino, Times, serif;	color: #333;
+	line-height: 1.5em; /* 24/16 */
+	margin: 0 auto;
+	padding-bottom: 3em;
+	height: 100%;
+}
+
+#page {
+	width: 90%;
+	max-width: 300px;
+	margin: 97px auto;
+	height: 400px;
+	padding-bottom: 2em;
+}
+
+hgroup {
+	background: url(../img/border-bottom.jpg) bottom left repeat-x;
+	margin-bottom: 1.5em;
+}
+
+
+h1 {
+	font-size: 1.75em; /* 28/16 */
+	font-family: 'Goudy', Georgia, Palatino, Times, serif;
+	font-weight: 100;
+	color: #555;
+	line-height: 2em;
+	text-shadow: 0 1px 0 #fff;
+	display: block;
+}
+
+h2 {
+	font: 1.125em Goudy, Georgia, Palatino, Times, serif; /* 18/16 */
+	font-style: italic;
+	line-height: 0.5em;
+	font-weight: lighter;
+	color: #606060;
+	padding-bottom: 1em;
+}
+
+p {	margin-bottom: 1em; }
+
+a {
+	color: #2d8cbe;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a:hover {
+	border-bottom: 1px #2d8cbe solid;
+}
+
+.the-end {
+	text-align: center;
+}
+
+.the-end img:hover {
+	cursor: pointer;
+	-webkit-transform: rotate(-180deg); 
+	-webkit-transition: -webkit-transform 1s linear;
+}
+
+.soon {
+	font: 2em 'League Gothic', Calibri, Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	color: #333;
+	text-align: center;
+	text-shadow: #fff 0 1px 0;
+	opacity: 0;
+}
+
+.aparecium {
+	color: #555;
+	opacity: 1 !important;
+	-webkit-transition: all 3s linear;
+
+}
+
+
+
+/* ENDS MEDIA GENERAL */
+}
+
+/* iPHONE */
+
+@media screen and (max-device-width: 480px) and (orientation: Portrait) {
+
+body {
+	background-color: #eee;
+	background: url(../img/bg-html2.png) top center repeat-x;
+	font-family: Georgia, Palatino, Times, serif;
+	font-size: 300%;
+	color: #333;
+	line-height: 1.5em; /* 24/16 */
+	margin: 0 auto;
+	padding-bottom: 0;
+	height: auto;
+}
+
+#page {
+	width: 90%;
+	max-width: 90%;
+	min-width: 90%;
+	margin: 1.5em auto;
+}
+
+.the-end img {
+	width: 54px;
+}
+
+.the-end img:hover {
+	cursor: pointer;
+	-webkit-transform: rotate(-180deg); 
+	-webkit-transition: -webkit-transform 1s linear;
+}
+
+}
+
+@media screen and (max-device-width: 480px) and (orientation: Landscape) {
+
+body {
+	background-color: #eee;
+	background: url(../img/bg-html2.png) top center repeat-x;
+	font-family: Georgia, Palatino, Times, serif;
+	font-size: 150%;
+	color: #333;
+	line-height: 1.5em; /* 24/16 */
+	margin: 0 auto;
+	padding-bottom: 0;
+	height: auto;
+	width: 90%;
+}
+
+
+#page {
+	width: 90%;
+	max-width: 90%;
+	min-width: 90%;
+	margin: .5em auto;
+}
+
+.the-end img {
+	margin-top: 1em;
+}
+
+}
+
+

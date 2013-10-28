@@ -1,0 +1,1425 @@
+/*
+Theme Name: Aparecium
+Theme URI: http://gerardodiaz.me
+Description: Gerardo Diaz's Blog. I talk about web, technology and design. This theme and its design is property of Gerardo Diaz.
+Author: Gerado Diaz
+Version: 1.0
+Tags: Clean, light, simple, two-columns, responsive-design, css3, html5
+Author URI: http://gerardodiaz.me/about
+*/
+
+/* DESIGNED AND CODED BY GERARDO DIAZ - @GERARDODM */
+/* POWERED BY WORDPRESS & TYPEKIT */
+
+
+@font-face { font-family: 'League Gothic'; src: url('../fonts/league-gothic.otf'); }
+@font-face { font-family: 'Goudy'; src: url('../fonts/goudy.otf'); } 
+@font-face { font-family: 'Goudy'; font-style: italic; src: url('../fonts/OFLGoudyStM-Italic.otf'); }
+
+/* RESET */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  list-style: none; }
+
+::selection { background: #8ad8f2; }
+::-moz-selection { background: #8ad8f2; }
+  
+/* GIMME HTML5 NOW! */
+section, article, header, time, footer, nav, aside, hgroup, figure, figcaption { display: block; }
+
+/* ---960px ----------------------------------------------------------*/
+
+body {
+	background-color: #eee;
+	font-family: Constantia, Georgia, Palatino, Times, serif;	
+	color: #444;
+	line-height: 1.5em; /* 24/16 */
+	margin: 0 auto;
+	background: #eee url(../img/bg-html.png) bottom left repeat-x;
+	padding-bottom: 3em;
+	-webkit-tap-highlight-color: #8ad8f2;
+}
+
+#page {
+	width: 90%;
+	max-width: 960px;
+	margin: 0 auto;
+	padding-bottom: 2em;
+}
+
+h1 {
+	font: 1.75em 'League Gothic', Calibri, Candara, Optima, Helvetica, Arial, sans-serif; /* 32/16 */
+	color: #616161;
+	text-transform: uppercase;
+}
+
+h1 a { color: inherit; }
+h1 a:hover, h1 a:focus { border-bottom: 0px !important; color: #2d8cbe;
+ }
+
+h2 {
+	font: 1.25em Calibri, Candara, Optima, Helvetica, Arial, sans-serif; /* 32/16 */
+	color: #777;
+	text-transform: uppercase;
+	letter-spacing: 0.025em; 
+	line-height: 3em;
+}
+
+.addborder {
+	padding-bottom: 0.5em;
+	background: url(../img/border-bottom.jpg) bottom left repeat-x;
+	margin-bottom: 1em;
+}
+
+.bigger {
+	font: 1.75em museo-sans-1,museo-sans-2, times, serif;
+	font-weight: 900;
+}
+
+
+.topic-title {
+	font: 2.25em Helvetica, sans-serif;
+	font-weight: bold;
+	color: #333;
+	letter-spacing: -2px;
+	text-transform: uppercase;
+	line-height: 1em;
+	padding: 0 0 0.4375em;
+	margin-bottom: 1.75em;
+	background: url(../img/bg-tags.png) bottom left repeat-x;
+}
+
+a {
+	color: #2d8cbe;
+	text-decoration: none;
+}
+
+.center {
+	text-align: center;
+}
+
+.left {
+	text-align: left;
+}
+
+.clear {
+	clear: both;
+}
+
+.lowercased {
+	text-transform: lowercase !important;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+}
+
+iframe {
+	display: block;
+	width: 100%;
+	max-width: 500px;
+	margin: 0 auto;
+	border: 5px #fff solid;
+	box-shadow: 0 0 5px rgba(0,0,0,.35);
+	-webkit-box-shadow: 0 0 5px rgba(0,0,0,.35);
+}
+
+.bulleted li {
+	list-style: disc url(../img/bullet.png);
+	margin-left: 2em;
+}
+
+/* 0 -- ARCHIVES */
+
+.categories {
+	font-weight: bold;
+	color: #555;
+}
+
+
+/* ENDS ARCHIVES */
+
+
+/* 1 -- MASTER HEADER & NAVIGATION BAR */
+
+#masthead {
+	height: 3.875em;
+	background: url(../img/bg-masthead.png) bottom center; no-repeat;
+	background-size: 100%;
+	padding: 1.5em 0em;
+	position: fixed;
+	width: inherit;
+	max-width: 960px;
+	z-index: 1000;
+}
+
+#masthead h1 {
+	font-size: 1.75em; /* 28/16 */
+	font-family: 'Goudy', Georgia, Palatino, Times, serif;
+	font-weight: 100;
+	color: #555;
+	line-height: 2em;
+	text-shadow: 0 1px 0 #fff;
+	padding-left: 0.5em;
+	display: block;
+	float: left;
+}
+
+#masthead h1 a {
+	color: inherit;
+	text-shadow: inherit;
+}
+
+#masthead h1 a:hover, #masthead h1 a:focus {
+	color: #333;
+}
+
+#masthead h2 {
+	padding-left: 2em; 
+	font: 1em Goudy, Georgia, Palatino, Times, serrif; /* 18/16 */
+	font-style: italic;
+	font-weight: lighter;
+	color: #616161;
+	float: left;
+	position: relative;
+	top: 1em;
+	text-transform: none;
+	text-shadow: #fff 0 1px 0;
+}
+
+nav {
+	float: right;
+}
+
+nav ul {
+	padding: .75em 0.5em .75em 0;
+}
+
+nav ul li {
+	display: inline;
+	padding: 0.5em 0.5em;
+	text-transform: uppercase;	
+}
+
+nav ul li:last-child {
+	padding-right: 0;
+}
+
+nav ul li a {
+	font: 1.5625em 'League Gothic', Calibri, Candara, Optima, Helvetica, Arial, sans-serif; /* 26/16 */
+	color: #555;
+	letter-spacing: 0.025em; 
+	text-decoration: none;
+}
+
+nav ul li a:hover {
+	color: #2d8cbe;
+}
+
+nav ul li a:active, nav ul li  a:focus {
+	color: #2d8cbe;
+	position: relative;
+	top: 1px;
+	opacity: .8;
+}
+
+
+/* 1.1 -- MODAL FORM  */
+
+
+#simplemodal-container a.modalCloseImg {
+	background:url(/img/contact/closebox.png) no-repeat; /* adjust url as required */
+	width:25px;
+	height:29px;
+	display:inline;
+	z-index:3200;
+	position:absolute;
+	top:-15px;
+	right:-18px;
+	cursor:pointer;
+}
+
+
+/* 2 -- CONTENT AND WIDGET AREAS */
+
+/* 2.1 -- CONTENT SECTION*/
+
+#content {
+	float: left;
+	width: 64.853333333%; /* 604/960 */
+	padding: 8.75em 0 0 1em; /* 140/16 */
+}
+
+#content-wide {
+	width: 95%; /* 912px */
+	padding: 8.75em 1.5em 0; /* 140/16 */ 
+	float: left;
+	margin-bottom: 5em;
+}
+
+#content a {
+	font-weight: normal;
+}
+
+#content a:hover, #content a:focus {
+	border-bottom: 1px #2d8cbe solid;
+}
+
+span.author {
+	display: block;
+	font: 0.875em Constantia, Georgia, Palatino, Times, serif; /* 14/16 */
+	font-style: italic;
+	font-weight: normal;
+	margin: -1em 0 2em;
+	color: #888;
+	text-transform: capitalize;
+	text-shadow: 0 1px 0 #fff;
+}
+
+section article {
+	margin-bottom: 5em;
+	text-align: justify;
+}
+
+section header h1 {
+	padding-bottom: 0.5em;
+	background: url(../img/border-bottom.jpg) bottom left repeat-x;
+	margin-bottom: 1em;
+}
+
+section article time {
+	position: relative;
+	top: 1.25em;
+	float: right;
+	font: 0.75em Constantia, Georgia, Palatino, Times, serif;
+	text-transform: uppercase;
+	letter-spacing: 0.125em;
+	color: #777;
+	padding-left: 1em;
+}
+
+p {
+	padding: 0.75em 0; /* 12/16 */
+	font-size: .9375em; /* 14/16 */
+}
+
+#content article img {
+	width: 80.385852%; /* 500/622 */
+	height: auto;
+	display: block;
+	margin: 1em auto;
+	border: 5px #fff solid;
+	box-shadow: 0 0 5px rgba(0,0,0,.35);
+	-webkit-box-shadow: 0 0 5px rgba(0,0,0,.35);
+ }
+
+#content article img.noborder {
+	border: none;
+	-webkit-box-shadow: none;
+}
+
+figure.pic {
+	width: 40.192926%; /* 250/620 */
+	height: auto;
+	float: right;
+	margin: 0 0 0 1em;
+}
+
+figure img {
+	width: 96% !important; /* (250-10)/250 */
+	margin: 0 auto !important;
+}
+
+figcaption {
+	color: #888;
+	font: italic .6875em Georgia, Palatino, Times, serif;
+	text-align: right;
+	position: relative;
+	top: -1em;
+}
+
+figcaption a {
+	color: inherit;
+}
+
+figcaption a:hover {
+	border-bottom: 1px solid #888 !important;
+}
+
+blockquote {
+	padding: .5em 0 .5em 1.25em; /* 8/16, 20/16 */
+	font: .92857143em Constantia, Georgia, Georgia, Palatino, Times, serif;
+	font-style: italic;
+	line-height: 1.5em; /* 22/16 */
+	color: #555;
+	border-left: 1px #ccc solid;
+	margin-left: 1.25em; /* 20/16 */
+	text-shadow: 0 1px 0 #fff;
+}
+
+article footer {
+	border-top: 1px #d7d7d7 solid;
+	border-bottom: 1px #d7d7d7 solid;
+	width: inherit;
+	margin: 2em 0;
+	padding: 0 0.5em; /* 8/16*/
+}
+
+article footer p {
+	font: 0.875em Constantia, Georgia, Palatino, Times, serif;
+	font-style: italic;
+	color: #555;	
+}
+
+article footer p:before {
+	content: url(../img/tag.gif);
+	padding-right: 0.5em; /* 8/16 */
+}
+
+.next-prev {
+	height: 3em;
+}
+
+span.previous {
+	float: left;
+	font-size: 0.875em;
+	font-style: italic;
+	max-width: 40%;
+	padding: 0 0 4em;
+}
+
+span.next {
+	float: right;
+	font-size: 0.875em;
+	font-style: italic;
+	max-width: 40%;
+	padding: 0 0 4em;
+	text-align: right;
+}
+
+
+/* 2.1.1 Featured Gallery */
+
+
+.gallery-nav {
+	width: 100%;
+	text-align: right;
+	padding-bottom: 0.5em;
+}
+
+.gallery-nav li {
+	display: inline;
+	padding: 0 0 1em 1em;
+}
+
+.gallery-nav li a {
+	font: 1em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+.gallery-nav li a {
+	font: 1em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #555;
+}
+
+.gallery-nav li a.active {
+	color: #2d8cbe;
+}
+
+.feature-poster {
+	width: 100%; 
+	height: auto;
+	padding-bottom: 0;
+	text-align: center;
+	background: #e0e0e0 url(/wp-content/themes/gerardodiaz/img/bg-featured.png);
+	border-bottom: 1px solid #fff;
+	border-radius: 5px;
+	box-shadow: inset 0 0 20px rgba(0,0,0,.8);
+	-webkit-box-shadow: inset 0 0 20px rgba(0,0,0,.2);
+}
+
+.feature-poster p{
+	font-size: 0;
+	padding: 0;
+	margin: 0;
+	line-height: 0;
+}
+
+.feature-poster img {
+	margin: 0 auto;
+	width: 76.754386%; /* 700/912 */
+	height: auto;
+}
+
+.gallery-header {
+	display: block;
+	position: relative;
+}
+
+
+.gallery-title {
+	padding: 1em 0 0;
+	font: 1.5em museo-sans-1,museo-sans-2, times, serif;
+	font-weight: 900;
+	text-align: center;
+	color: #555;
+}
+
+.gallery-excerpt {
+	display: block;
+	font: 1em museo-sans-1,museo-sans-2, times, serif;
+	font-weight: 500;
+	color: #777;
+	margin-bottom: 3em;
+}
+
+.thumbnails {
+	padding: 0;
+	clear: left;
+	width: 100%;
+	text-align: center;
+}
+
+.thumbnails li {
+	display: inline-block;
+	-moz-inline-stack;
+	zoom:1;
+	*display:inline;
+	margin: 0 3% 1.5em 0;
+	width: 21%;
+}
+
+.thumbnails li img {
+	position: relative;
+	width: 95%;
+	border: 5px #fff solid;
+}
+
+.thumbnails li img:hover {
+	opacity: .95;
+	box-shadow: 0 0 10px rgba(0,0,0,.25);
+	-webkit-transition: all .2s;
+}
+
+.save {
+	color: #fff;
+	right: 0;
+	top: 1.5em;
+	position: absolute;
+	padding: .5625em 2em; /* 9/16 */
+	font: .875em Arial, Helvetica, sans-serif; /* 14/16 */
+	font-weight: bold;
+	border: 1px solid #333;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	background: #0568b3;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3a88c3), to(#36658a));
+	background: -moz-linear-gradient(top, #3a88c3, #36658a);
+	background: -o-linear-gradient(top, #3a88c3, #36658a);
+	background: linear-gradient(top, #3a88c3, #36658a);
+	text-transform: uppercase;
+	text-shadow: #061f4a 0 -1px 1px;
+	-webkit-box-shadow: rgba(255, 255, 255, .5) 0px 1px 1px inset, #ddd 0 1px 0;
+	-moz-box-shadow: rgba(255, 255, 255, .5) 0 1px 1px inset;
+	-o-box-shadow: rgba(255, 255, 255, .5) 0 1px 1px inset;
+	box-shadow: rgba(255, 255, 255, .5) 0 0px 1px inset, #ddd 0 1px 0;
+}
+
+.save:hover {
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0568b3), to(#003c6b));
+	background: -moz-linear-gradient(top, #0568b3, #003c6b);
+	background: -o-linear-gradient(top, #0568b3, #003c6b);
+	background: linear-gradient(top, #0568b3, #003c6b);
+}
+
+.save:active {
+	-webkit-box-shadow: rgba(0, 0, 0, .75) 0px 2px 3px inset;
+	-moz-box-shadow: rgba(0, 0, 0, .75) 0 2px 3px inset;
+	-o-box-shadow: rgba(0, 0, 0, .75) 0 2px 3px inset;
+	box-shadow: rgba(0, 0, 0, .75) 0 2px 3px inset;
+}
+
+.cancel {
+	color: #555;
+	padding: .5625em 2em; /* 9/16 */
+	font: .875em Arial, Helvetica, sans-serif; /* 14/16 */
+	font-weight: bold;
+	border: 1px solid #999;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	background: #ccc;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#eee), to(#aaa));
+	background: -moz-linear-gradient(top, #eee, #aaa);
+	background: -o-linear-gradient(top, #eee, #aaa);
+	background: linear-gradient(top, #eee, #aaa);
+	text-transform: uppercase;
+	text-shadow: #fff 0 1px 0;
+	-webkit-box-shadow: #ddd 0 1px 0;
+	-moz-box-shadow: #ddd 0 1px 0;
+	-o-box-shadow: #ddd 0 1px 0;
+	box-shadow: #ddd 0 1px 0;
+}
+
+.cancel:hover {
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ddd), to(#999));
+	background: -moz-linear-gradient(top, #ddd, #999);
+	background: -o-linear-gradient(top, #ddd, #999);
+	background: linear-gradient(top, #ddd, #999);
+}
+
+.cancel:active {
+	-webkit-box-shadow: rgba(0, 0, 0, .75) 0px 2px 3px inset;
+	-moz-box-shadow: rgba(0, 0, 0, .75) 0 2px 3px inset;
+	-o-box-shadow: rgba(0, 0, 0, .75) 0 2px 3px inset;
+	box-shadow: rgba(0, 0, 0, .75) 0 2px 3px inset;
+}
+
+
+
+
+/* 2.1.2 INSPIRATION */
+
+.inspiration-wrap {
+	text-align: center;
+}
+
+.inspire {
+	display: inline-block;
+	-moz-inline-stack;
+	zoom:1;
+	*display:inline;
+	width: 23.026316%; /* 210/912 */
+	margin: 3.2894737%; /* 30/912 */
+	vertical-align: top;
+	text-align: left;
+}
+
+.inspire img {
+	width: 100%;
+	margin-bottom: .75em;
+	border: 5px solid #fff;
+	box-shadow: 1px 2px 4px rgba(0,0,0,.25);
+	-webkit-box-shadow: 1px 2px 4px rgba(0,0,0,.25);
+}
+
+.inspire img:hover{
+	-webkit-box-shadow: 1px 2px 4px rgba(0,0,0,.5);
+}
+
+.inspire img:active{
+	-webkit-box-shadow: 0px 0px 2px rgba(0,0,0,.5);
+}
+
+.inspire h2 {
+	font: bold .875em Helvetica, Arial, sans-serif;
+	color: #333;
+	text-transform: uppercase;
+}
+
+.inspire p {
+	font-size: .875em;
+}
+
+
+/* 2.2 -- WIDGET SECTION*/ 
+
+#widgets {
+	float: right;
+	width: 21.25%; /* 204/960 */
+	padding: 8.75em 1em 0 0; /* 140/16 */
+}
+
+#widgets section {
+	margin-bottom: 2em;
+}
+
+#widgets section header {
+	margin-bottom: 1em;
+	clear: left;
+}
+
+#widgets h1 {
+	padding-bottom: 0.5em;
+	background: url(../img/border-bottom.jpg) bottom left repeat-x;
+
+}
+
+
+/* 2.2.0 -- SEARCH */
+
+.screen-reader-text {
+	display:none;
+}
+
+#searchsubmit {
+	display: none;
+}
+
+input[type="search"] {
+	margin: 0 0 3em;
+	padding: 0.5em 1em; 
+	border: 1px solid #999; 
+	width: 80%;
+	max-width: 320px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 20px;
+	-webkit-box-shadow: #fff 0 1px 0;
+	-moz-box-shadow: #fff 0 1px 0;
+	-o-box-shadow: #fff 0 1px 0;
+	box-shadow: #fff 0 1px 0;
+	font: bold 0.75em Arial, Helvetica, Geneva, sans-serif;
+	color: #555;
+}
+
+/* 2.2.1 -- ROBOTS QR CODE*/
+
+#widgets img[src*=qrcode] {
+	padding-top: .5em;
+	width: 69.80198%; /*  141/202 */
+	min-width: 94px;
+	max-width: 141px;
+}
+
+
+/* 2.2.2 -- SOCIAL MEDIA ICONS (DESIGN BY GEDY RIVERA)*/
+
+ul.social {
+	list-style: none;
+	margin: 0;
+	padding: 0 0 2em;
+}
+
+ul.social li a {
+	display: block;
+	float: left;
+	width: 33px; /* Not Resposive here */
+	height: 33px;
+	margin: 0 4% 4% 0;  /* ~8/204 */
+}
+
+ul.social li:last-child a {
+	margin-right: 0;
+}
+
+ul.social li a.twitter {
+	background: url(../img/social-twitter.png) top left no-repeat;
+	background-size: 200%; /* 200% is used to show only one icon! */
+	color: #333;
+}
+ul.social li a.twitter:hover {
+	background: url(../img/social-twitter.png) top right no-repeat;	
+}
+
+ul.social li a.dribbble {
+	background: url(../img/social-dribbble.png) top left no-repeat;
+	background-size: 200%;
+}
+ul.social li a.dribbble:hover {
+	background: url(../img/social-dribbble.png) top right no-repeat;
+}
+
+ul.social li a.linkedin {
+	background: url(../img/social-linkedin.png) top left no-repeat;
+	background-size: 200%;
+}
+ul.social li a.linkedin:hover {
+	background: url(../img/social-linkedin.png) top right no-repeat;
+}
+
+ul.social li a.rss-feed {
+	background: url(../img/social-rss.png) top left no-repeat;
+	background-size: 200%;
+}
+ul.social li a.rss-feed:hover {
+	background: url(../img/social-rss.png) top right no-repeat;
+}
+
+ul.social li a:active, ul.social li a:focus {
+	position: relative;
+	top: 1px;
+	opacity: .8;
+}
+
+/* 2.2.3 -- TWITTER UPDATES */
+
+.tweet li {
+	list-style: none;
+}
+
+.tweet {
+	font: .875em Constantia, Georgia, Palatino, Times, serif; /* 13/16 */
+	font-style: italic;
+	line-height: 1.5em; /* 24/16 */
+	color: #444;
+	text-shadow: 0 1px 0 #fff;
+}
+
+.tweet a {
+	font-weight: bold;
+}
+
+.tweet a:hover, .tweet a:focus {
+	border-bottom: 1px #2d8cbe solid;
+}
+
+.tweet a.tweetdate {
+	font-size: .84615385em; /* 11/13 */
+}
+
+/* 2.2.4 -- LINKS */
+
+
+ul.links {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+ul.links li a:hover, ul.links li a:focus {
+	border-bottom: 1px #2d8cbe solid;
+}
+
+
+/* 2.2.5 -- LANYRD CONFERENCES */
+
+#w-conferences ul,
+#w-conferences ol,
+#w-conferences li,
+#w-conferences p  {
+	margin: 0;
+	padding: 0;
+}
+
+#w-conferences ol, #w-conferences ul {
+	border-bottom: 1px #ddd solid ;
+	margin-bottom: 1em;
+	padding-bottom: 0.5em;
+}
+
+
+.lanyrd-target-splat {
+	font: 0.875em Constantia, Georgia, Palatino, Times, serif; /* 14/16 */
+}
+
+.lanyrd-target-splat {
+	font: 0.875em Constantia, Georgia, Palatino, Times, serif; /* 14/16 */
+}
+
+.lanyrd-target-splat abbr {
+	font-style: italic !important;
+	font-size: 0.85714286em; /* 12/14 */
+	line-height: 3em;
+	color: #555;
+}
+
+
+ol.lanyrd-listing a.flag-mini img {
+	position: relative;
+	top: -2px;
+	left: 5px;
+}
+
+.lanyrd-target-splat a[href*=gerardo] {
+	font-weight: bold;
+	font-style: italic;
+	font-size: .75em; /* 12/16 */
+}
+
+.lanyrd-target-splat a:hover {
+	border-bottom: 1px #2d8cbe solid;
+}
+
+
+
+/* 3 -- MAIN FOOTER */
+
+#copy {
+	position: relative;
+	margin: 4em 0 0;
+	display: block;
+	width: 95%;
+	max-width: 944px;
+	background: url(../img/bg-footer.png) center center no-repeat;
+	color: #333;
+	font: 0.75em Constantia, Georgia, Palatino, Times, serif; /* 12/16 */
+	font-style: italic;
+	padding: 2em 0 2em 1em; /* 32/16 , 16/16 */
+	text-shadow: 0 1px 0 #fff;
+	overflow: visible;
+}
+
+#copy span.poweredby {
+	float: right;
+	padding-right: 1em;
+}
+
+.slogan {
+	display: block;
+	width: 28.679654%; /* /924 */
+	height: 55px;
+	position: absolute;
+	top: 14px;
+	left: 50%;
+	margin-left: -10%;
+	background: url(../img/slogan.png) top center no-repeat;
+	background-size: 100%;
+	opacity: .9;
+}
+
+.glyph-end {
+	display: block;
+	width: 2.8125%; /* 27/960 */
+	height: 33px;
+	position: absolute;
+	bottom: -75%;
+	left: 50%;
+	margin-left: -1%;
+	background: url(../img/glyph-end.png) top center no-repeat;
+	opacity: .9;
+}
+
+/* --ENDS GENERAL CSS ---------------------------------------------*/
+
+/* --TEMPLATE FULL WIDTH-------------------------------------------*/
+
+
+#contentwide {
+	float: left;
+	width: 100%; /* 604/960 */
+	padding: 8.75em 0 0 1em; /* 140/16 */
+}
+
+
+/* --1800px--------------------------------------------------------*/
+
+@media screen and (min-width:1800px) {
+
+	#page {
+		max-width: 1250px;
+	}
+	
+	#masthead {
+		max-width: 1250px;
+	}
+	
+	/* 2.1 -- CONTENT SECTION*/
+	
+	#content {
+		width: 620px;
+	}
+	
+	#content article img {
+		width: auto;
+	}
+	
+	/* 2.2 -- WIDGET SECTION*/ 
+	
+	#widgets {
+		float: right;
+		width: 500px;
+		position: relative;
+	}
+	
+	#widgets section {
+		display: inline-block;
+		-moz-inline-stack;
+		zoom:1;
+		*display:inline;
+		vertical-align: top;
+		width: 38%;
+		float: left;
+		margin-right: 3em;
+	}
+	
+	#w-conferences {
+		clear: both;
+	}
+	
+	#copy {
+		margin: 0 auto;
+	}
+	
+}/* ENDS 1800px */
+
+
+/* --960px--------------------------------------------------------*/
+
+
+@media screen and (max-width:960px) {
+
+	#masthead h1 {
+		font-size: 1.625em; /* 26/16 */
+		position: absolute;
+		float: none;
+	}
+	
+	#masthead h2 {
+		font-size: 1em; /* 16/16 */
+		color: #777;
+		position: absolute;
+		float: none;
+		padding: 3.125em 0 0 1em;
+	}
+	
+	/* 2.2.2 -- SOCIAL MEDIA ICONS (DESIGN BY GEDY RIVERA)*/
+	
+	ul.social li a {
+		width: 16.6666666667%; /* 33/204 */
+	}
+	
+	.slogan {
+		top:  18px;
+		margin-left: -5%;
+	}
+
+
+}/* ENDS 960px */
+
+/* --768px & iPad-------------------------------------------------*/
+
+@media screen and (max-width:768px) {
+	
+	/* 1 -- MASTER HEADER & NAVIGATION BAR */
+	
+	#masthead {
+		height: 4.5em;
+	}
+	
+	#masthead h1 {
+		font-size: 1.5em; /* 26/16 */
+		position: relative;
+		float: left;
+		margin: 0 auto;
+		padding: 0 0 0 .25em;
+		line-height: 1em;
+	}
+	
+	#masthead h1:after {
+		content: url(../img/after-h1.png);
+	}
+	
+	#masthead h2 {
+		font: 1em Goudy, Georgia, Palatino, Times, serrif; /* 20/16 */
+		font-style: italic;
+		position: relative;
+		top: 0.15em;
+		float: left;
+		padding: 0 0 0 0.25em;
+		margin: 0 auto;
+		left: auto;
+		line-height: 1em;
+	}
+	
+	nav {
+		position: absolute;
+		float: left;
+		top: 3em;
+	}
+		
+	/* 2.1 -- CONTENT SECTION*/
+	
+	#content {
+		float: none;
+		margin: 0 auto;
+		width: 90%; 
+		padding-left: 0;
+	}
+		
+	.inspire {
+		width: 40%;
+		max-width: 210px;
+	}
+	
+	/* 2.2 -- GALLERY */
+
+	.save {
+		position: relative;
+		display: block;
+		width: 70%;
+		text-align: center;
+		float: none;
+		top: 0;
+		right: 0;
+		margin: 1em auto;
+	}
+	
+	/* 3 -- WIDGET SECTION*/ 
+	
+	#widgets {
+		float: none;
+		margin: 0 auto;
+		width: 90%; 
+		padding: 2em 0 2em 0; /* 140/16 */
+	}
+	
+	#widgets section {
+		float: left;
+		width: 25%;
+	}
+	
+	#widgets h1 {
+		font: 1.125em Calibri, Helvetica, Arial; /* 24/16 */
+		background: url(../img/border-bottom.jpg) bottom left repeat-x;
+		text-shadow: 0 1px 0 #FFF;
+	}
+
+	/* 2.2.0 -- SEARCH*/
+
+	#searchform {
+		margin: 0 auto;
+		width: 80%;
+		text-align: center;
+	}
+	
+	/* 2.2.1 -- SOCIAL MEDIA ICONS (DESIGN BY GEDY RIVERA)*/
+	
+	#followme {
+		position: relative;
+	}
+	
+	ul.social li {
+	margin: 0.5em 0;
+	}
+	
+	ul.social li a {
+		display: block;
+		float: none;
+		width: 33px; /* Not Resposive here */
+		height: 33px;
+		margin-right: 6%;  /* ~12/204 */
+	}
+	
+	#twitter a:after {
+		content: "Twitter";
+		position: relative;
+		left: 40px;
+		top: 0.25em;
+		font: 0.875em Constantia, Georgia, Palatino, Times, serif; /* 14/16 */
+		font-style: italic;
+		color: #555;
+	}
+	
+	#dribbble a:after {
+		content: "Dribbble";
+		position: relative;
+		left: 40px;
+		top: 0.25em;
+		font: 0.875em Constantia, Georgia, Palatino, Times, serif; /* 14/16 */
+		font-style: italic;
+		color: #555;
+	}
+	
+	#linkedin a:after {
+		content: "LinkedIn";
+		position: relative;
+		left: 40px;
+		top: 0.25em;
+		font: 0.875em Constantia, Georgia, Palatino, Times, serif; /* 14/16 */
+		font-style: italic;
+		color: #555;
+	}
+	
+	#rss-feed a:after {
+		content: "RSS";
+		position: relative;
+		left: 40px;
+		top: 0.25em;
+		font: 0.875em Constantia, Georgia, Palatino, Times, serif; /* 14/16 */
+		font-style: italic;
+		color: #555;
+	}
+	
+	/* 2.2.2 -- ROBOTS */
+	
+	#w-qrcode {
+		margin: 0 12%;
+	}
+	
+	#w-qrcode img[src*=qrcode] {
+		width: 94px;
+	}
+	
+	/* 2.2.3 -- LAST TWEET */
+	
+	#w-lasttweet {
+		display: none;
+	}
+	
+	/* 2.2.4 -- LINKS */
+	
+	#w-otherlinks {
+		float: right;
+	}
+
+	#w-otherlinks a {
+		font: 0.875em Constantia, Georgia, Palatino, Times, serif; /* 14/16 */
+	}
+		
+	/* 2.2.5 -- CONFERENCES VIA LANYRD */
+	
+	#w-conferences {
+		display: none;
+	}
+	
+	/* 3 -- MAIN FOOTER */
+	
+	#copy {
+		margin-top: 2em;
+	}
+	
+	.slogan {
+		display: none;
+	}
+	
+	.glyph-end {
+		display: block;
+		width: 2.8125%; /* 27/960 */
+		min-width: 10%;
+		height: 33px;
+		position: absolute;
+		bottom: -75%;
+		left: 50%;
+		margin-left: -6%;
+		background: url(../img/glyph-end.png) top center no-repeat;
+		opacity: .9;
+	}
+	
+}/* ENDS MEDIA MAX-WIDTH: 768px */
+
+/* --520px & iPhone-----------------------------------------------*/
+
+@media screen and (max-width:520px) {
+
+	#page {
+		width: 95%;
+	}
+	
+	#masthead {
+		position: relative;	
+		margin: 0 auto;
+		padding: 1em 0 .5em;
+		text-align: center;
+		width: 100%;
+	}
+	
+	#masthead h1 {
+		font-size: 1.375em; /* 22/16 */
+		float: none;
+		margin: 0 auto;
+		padding: 0;
+	}
+	
+	#masthead h1:after {
+		content: "";
+	}
+	
+	#masthead h2 {
+		display: none;
+	}
+	
+	nav {
+		position: relative;
+		float: none;
+		margin: 0 auto;
+		top: 0;
+	}
+	
+	nav ul {
+		padding-left: 0.25em;
+	}
+	
+	nav ul li a {
+		font-size: 1.3125em; /* 20/16 */
+	}
+	
+	nav ul li {
+		padding: .5em .125em;
+	}
+	
+	nav ul li:first-child {
+		padding: .5em .125em .5em 0;
+	}
+	
+	nav ul li:last-child {
+		padding: .5em 0 .5em .125em;
+	}
+	
+	.cancel {
+		width: 70%;
+	}
+
+	/* 2.1 -- CONTENT SECTION*/
+	
+	#content, #content-wide {
+		padding: .75em 0 0; /* 12/16 */
+	}
+		
+	section article time {
+		float: none;
+		top: 0;
+		padding: 0 0 1em 0;
+	}
+	
+	section article h1 {
+		font-size: 1.8125em; /* 30/16 */
+	}
+	
+	figure.pic {
+		width: 50%; /* 250/620 */
+		height: auto;
+		float: none;
+		margin: 0 auto;
+	}
+	
+	/* 2.2 INSPIRATION */
+		
+	.inspire {
+		width: 210px;
+		text-align: left;
+	}
+	
+	
+	/* 2.3 GALLERY */
+	
+	.gallery-nav {
+		text-align: center;
+	}
+	
+	.feature-poster {
+		background: none;
+		border-bottom: none;
+		border-radius: 0;
+		box-shadow: none;
+		-webkit-box-shadow: none;
+	}
+	
+	.feature-poster img {
+		width: 100%; 
+	}
+	
+	.gallery-excerpt {
+		margin-bottom: 1em;
+	}
+
+	.thumbnails li {
+		margin: 0 3% 1em 0;
+		width: 28%;
+	}
+	
+	.thumbnails li img{
+		position: relative;
+		width: 95%;
+		border: 5px #fff solid;
+	}
+		
+	
+	/* 3 -- WIDGETS */
+	
+	#widgets section {
+		width: 40%;
+	}
+	
+	#widgets h1 {
+		font-size: 0.875em; /* 14/16 */
+		font-weight: bold;
+	}
+	
+	/* 3.2.2 -- FOLLOW ME */
+	
+	#w-followme {
+		margin-right: 20%;
+	}
+	
+	/* 3.2.2 -- ROBOTS */
+	
+	#w-qrcode {
+		display: none;
+	}
+	
+	#copy {
+		font: 0.75em Georgia, Palatino, Times, serif; /* 12/16 */
+		text-align: center;
+	}
+	
+	#copy span.poweredby {
+		display: none;
+	}
+
+	/* 4 -- 404 NOT FOUND */
+	
+	.notfound-404 img{
+		width: 50%;
+		height: auto;
+	}
+
+
+
+}/* ENDS 520px */
+
+
+/* --FIX DEVICES IN LANDSCAPE-----------------------------------------*/
+
+@media screen and (max-device-width:1024px) and (orientation:Landscape) {
+	#masthead {
+		position: relative;
+		width: 100%;
+	}
+
+	#content, #content-wide {
+		padding-top: 2em;
+	}
+} /* ENDS FIX FOR LANDSCAPE. */
+
+/* --iPHONE FONT SIZE REDUCTION ---------------------------------------*/
+
+@media screen and (max-device-width:480px) and (orientation:Landscape) {
+	article p {
+		font-size: 71.428571%; /* 10/14 */
+		line-height: 1.75em;
+	}
+} /* ENDS FIX FOR FONT IN LANDSCAPE. */
+
+
+
+@media only screen and (-webkit-min-device-pixel-ratio:2) {
+	article footer p:before {
+		content: "";
+		float: left;
+		width: 26px;
+		height: 26px;
+		background: url(../img/tag@x2.png) top left no-repeat;
+		background-size: 50%;
+		padding-right: 0;
+	}
+	
+	.glyph-end {
+		background: url(../img/glyph-end@2x.png) top center no-repeat;
+		background-size: 70%;
+	}
+
+}
+
